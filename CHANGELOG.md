@@ -27,7 +27,8 @@
 
 ### Added Features
 1. Custom Engine Modifications
-2. The engine displays a warning when outdated
+2. Vanilla Songs
+3. The engine displays a warning when outdated
 
 ## [2.1] Unreleased
 
