@@ -37,3 +37,4 @@
 
 ### Added Features
 1. Botplay text isn't shown anymore :)
+2. You can choose which mods you want to see, and which mods to disable.
