@@ -38,3 +38,4 @@
 ### Added Features
 1. Botplay text isn't shown anymore :)
 2. You can choose which mods you want to see, and which mods to disable.
+3. Fixed a bug where if you changed the Note Assets of songs with special notes, the special notes would appear bugged out.
