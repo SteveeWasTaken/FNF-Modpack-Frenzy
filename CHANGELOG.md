@@ -30,10 +30,11 @@
 2. Vanilla Songs
 3. The engine displays a warning when outdated
 
-## [2.1] Unreleased
+## [2.1] 22/11/2021
 
 ### Added Mods
 1. Friday Night Funkin' NEO - https://gamebanana.com/mods/44230
+2. Friday Night Funkin' B3 Remixes - https://gamebanana.com/mods/42734
 
 ### Added Features
 1. Botplay text isn't shown anymore :)
