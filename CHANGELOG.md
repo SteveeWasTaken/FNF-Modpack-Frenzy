@@ -40,3 +40,14 @@
 1. Botplay text isn't shown anymore :)
 2. You can choose which mods you want to see, and which mods to disable.
 3. Fixed a bug where if you changed the Note Assets of songs with special notes, the special notes would appear bugged out.
+
+## [2.2] Unreleased
+
+### Added Mods
+1. Bob and Bosip - https://gamebanana.com/mods/297087
+2. Friday Night Sandboxin' - https://gamebanana.com/mods/294376
+
+### Added Features
+1. Cleaned the mods/images folder, giving each note assets it's own folder.
+2. Removed the Vanilla songs.
+3. Moved everything to the assets folder, instead of the mods folder.
