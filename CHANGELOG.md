@@ -41,7 +41,7 @@
 2. You can choose which mods you want to see, and which mods to disable.
 3. Fixed a bug where if you changed the Note Assets of songs with special notes, the special notes would appear bugged out.
 
-## [2.2] Unreleased
+## [2.1.1] Unreleased
 
 ### Added Mods
 1. Bob and Bosip - https://gamebanana.com/mods/297087
