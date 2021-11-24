@@ -25,6 +25,7 @@ if exist week-neo1.json~ (echo [15] NEO)
 if exist week-b3-1.json~ (echo [16] B3)
 if exist week-sandbox.json~ (echo [17] Sandboxin')
 if exist week-bobb1.json~ (echo [18] Bob ^& Bosip)
+if exist week-star1.json~ (echo [19] Starcatcher)
 set /p userchoice=""
 if %USERCHOICE%==1 (set mod=stickman)
 if %USERCHOICE%==2 (set mod=tricky)
@@ -44,6 +45,7 @@ if %USERCHOICE%==15 (set mod=neo)
 if %USERCHOICE%==16 (set mod=b3)
 if %USERCHOICE%==17 (set mod=sandbox)
 if %USERCHOICE%==18 (set mod=bobsip)
+if %USERCHOICE%==19 (set mod=starcatcher)
 goto modcheck
 
 :modcheck
@@ -65,6 +67,7 @@ if /i %MOD%==neo (set exists=y)
 if /i %MOD%==b3 (set exists=y)
 if /i %MOD%==sandbox (set exists=y)
 if /i %MOD%==bobsip (set exists=y)
+if /i %MOD%==starcatcher (set exists=y)
 if /i %EXISTS%==y (goto modchange) else (goto fail)
 
 :modchange
@@ -181,6 +184,13 @@ rename week-bobb1.json week-bobb1.json~
 rename week-bobb2.json week-bobb2.json~
 rename week-bobb3.json week-bobb3.json~
 rename week-bobb4.json week-bobb4.json~
+goto startb
+
+:starcatcher
+rename week-star1.json~ week-star1.json
+rename week-star2.json~ week-star2.json
+rename week-star3.json~ week-star3.json
+rename week-star4.json~ week-star4.json
 goto startb
 
 :fail
