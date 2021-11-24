@@ -718,7 +718,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 	static var options:Array<String> = [
 		'GRAPHICS',
 		'Low Quality',
-		'Anti-Aliasing',
 		'Persistent Cached Data',
 		#if !html5
 		'Framerate', //Apparently 120FPS isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
@@ -876,20 +875,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 					case 'Low Quality':
 						ClientPrefs.lowQuality = !ClientPrefs.lowQuality;
 
-					case 'Anti-Aliasing':
-						ClientPrefs.globalAntialiasing = !ClientPrefs.globalAntialiasing;
-						showCharacter.antialiasing = ClientPrefs.globalAntialiasing;
-						for (item in grpOptions) {
-							item.antialiasing = ClientPrefs.globalAntialiasing;
-						}
-						for (i in 0...checkboxArray.length) {
-							var spr:CheckboxThingie = checkboxArray[i];
-							if(spr != null) {
-								spr.antialiasing = ClientPrefs.globalAntialiasing;
-							}
-						}
-						OptionsState.menuBG.antialiasing = ClientPrefs.globalAntialiasing;
-
 					case 'Note Splashes':
 						ClientPrefs.noteSplashes = !ClientPrefs.noteSplashes;
 
@@ -1007,8 +992,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 				daText = "If checked, disables some background details,\ndecreases loading times and improves performance.";
 			case 'Persistent Cached Data':
 				daText = "If checked, images loaded will stay in memory\nuntil the game is closed, this increases memory usage,\nbut basically makes reloading times instant.";
-			case 'Anti-Aliasing':
-				daText = "If unchecked, disables anti-aliasing, increases performance\nat the cost of the graphics not looking as smooth.";
 			case 'Downscroll':
 				daText = "If checked, notes go Down instead of Up, simple enough.";
 			case 'Middlescroll':
@@ -1083,8 +1066,6 @@ class PreferencesSubstate extends MusicBeatSubstate
 						daValue = ClientPrefs.showFPS;
 					case 'Low Quality':
 						daValue = ClientPrefs.lowQuality;
-					case 'Anti-Aliasing':
-						daValue = ClientPrefs.globalAntialiasing;
 					case 'Note Splashes':
 						daValue = ClientPrefs.noteSplashes;
 					case 'Flashing Lights':

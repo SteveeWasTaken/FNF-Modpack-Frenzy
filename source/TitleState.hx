@@ -75,14 +75,14 @@ class TitleState extends MusicBeatState
 		#if CHECK_FOR_UPDATES
 		if(!closedState) {
 			trace('checking for update');
-			var http = new haxe.Http("https://raw.githubusercontent.com/ShadowMario/FNF-PsychEngine/main/gitVersion.txt");
+			var http = new haxe.Http("https://raw.githubusercontent.com/SteveeWasTaken/FNF-Modpack-Frenzy/main/gitVersion.txt");
 			
 			http.onData = function (data:String)
 			{
 				updateVersion = data.split('\n')[0].trim();
-				var curVersion:String = MainMenuState.psychEngineVersion.trim();
+				var curVersion:String = MainMenuState.modpackVersion.trim();
 				trace('version online: ' + updateVersion + ', your version: ' + curVersion);
-				if(updateVersion != curVersion) {
+				if(updateVersion > curVersion) {
 					trace('versions arent matching!');
 					mustUpdate = true;
 				}
@@ -253,7 +253,7 @@ class TitleState extends MusicBeatState
 
 		credTextShit.visible = false;
 
-		logoSpr = new FlxSprite(0, FlxG.height * 0.4).loadGraphic(Paths.image('titlelogo'));
+		logoSpr = new FlxSprite(0, FlxG.height * 0.4).loadGraphic(Paths.image('steveicon'));
 		add(logoSpr);
 		logoSpr.visible = false;
 		logoSpr.setGraphicSize(Std.int(logoSpr.width * 0.55));
@@ -500,15 +500,12 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Funkin');
+					addMoreText('Modpack');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Modpack');
+					addMoreText('Frenzy');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Frenzy'); // credTextShit.text += '\nFunkin';
-
-				case 16:
 					skipIntro();
 			}
 		}

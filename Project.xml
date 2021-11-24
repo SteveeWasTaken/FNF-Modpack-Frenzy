@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Psych Engine" file="PsychEngine" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="0.2.7" company="ShadowMario" />
+	<app title="Friday Night Funkin' Modpack Frenzy" file="ModpackFrenzy" packageName="com.steveewastaken.modpackfrenzy" package="com.steveewastaken.modpackfrenzy" main="Main" version="0.2.7" company="SteveeWasTaken" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -50,7 +50,9 @@
 	<define name="VIDEOS_ALLOWED" if="web || windows" unless="32bits"/>
 
 	<!-- DONT ENABLE THIS -->
-	<define name="CHECK_FOR_UPDATES" if="desktop officialBuild"/>
+
+	<!-- note from the modpack creator, actually i DID have to enable this so that it would update properly lmao -->
+	<define name="CHECK_FOR_UPDATES" if="desktop"/>
 
 	<!-- <define name="PRELOAD_ALL" /> -->
 	<define name="PRELOAD_ALL" unless="web" />
@@ -96,7 +98,11 @@
 	<assets path="assets/week6"         library="week6"         exclude="*.mp3" unless="web"/>
 	
 	<assets path='example_mods' rename='mods' embed='false' if="MODS_ALLOWED"/>
-	<assets path='art/readme.txt' rename='do NOT readme.txt' />
+	<assets path='art/readme.txt' rename='original-readme.txt' />
+	<assets path='art/mod-readme.txt' rename='mod-readme.txt' />
+	<assets path='art/mod-credits.txt' rename='credits.txt' />
+	<assets path='art/modpack-disable.bat' rename='modpack-disable.bat' />
+	<assets path='art/modpack-enable.bat' rename='modpack-enable.bat' />
 	<!-- <template path='mods' /> -->
 	
 	<!-- assets path="CHANGELOG.md" rename='changelog.txt' -->
@@ -106,7 +112,7 @@
 		THEN UHHH I USED THE NAME OF THE FONT WITH SETFORMAT() ON THE TEXT!!!
 		NOT USING A DIRECT THING TO THE ASSET!!!
 	-->
-	<assets path="assets/fonts" embed='true'/>
+	<assets path="assets/fonts" embed='false'/>
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<haxelib name="flixel" />

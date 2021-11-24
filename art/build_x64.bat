@@ -5,6 +5,8 @@ echo BUILDING GAME
 lime build windows -release
 echo.
 echo done.
+title DONE
 pause
 pwd
-explorer.exe export\release\windows\bin
+cd export\release\windows\bin
+"ModpackFrenzy.exe"
