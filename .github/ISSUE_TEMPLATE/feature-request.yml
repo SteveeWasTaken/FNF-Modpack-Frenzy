@@ -4,6 +4,6 @@ labels: [addition]
 body:
 - type: input
   id: request
-      label: Mod Request
+      label: "Mod Request"
       description: "What mods do you want to see added into the Modpack Frenzy?"
       required: true
